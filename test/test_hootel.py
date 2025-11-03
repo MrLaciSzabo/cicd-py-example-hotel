@@ -36,7 +36,7 @@ class TestHootel(object):
 
         submit_btn = self.browser.find_element(By.NAME, 'submit')
         submit_btn.click()
-        time.sleep(5)
+        time.sleep(6)
 
         logout_btn = self.browser.find_element(By.ID, 'logout-link')
 

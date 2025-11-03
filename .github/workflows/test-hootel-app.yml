@@ -43,7 +43,7 @@ jobs:
 
     - name: Fun
       run: |
-        echo "dimidumi"
+        echo "dimidumika"
 
     - name: Allure Report action from marketplace
       uses: simple-elf/allure-report-action@master
