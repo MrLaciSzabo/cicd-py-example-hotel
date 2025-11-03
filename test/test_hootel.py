@@ -51,5 +51,5 @@ class TestHootel(object):
         time.sleep(1)
 
         hotel_list = self.browser.find_elements(By.XPATH, '//h4[@style="cursor: pointer"]')
-        assert len(hotel_list) != 0
+        assert len(hotel_list) != 1
         assert len(hotel_list) == 10
