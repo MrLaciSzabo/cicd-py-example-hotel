@@ -1,9 +1,9 @@
 import time
+
+import allure
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-import allure
-import pytest
 
 
 class TestHootel(object):
@@ -13,7 +13,7 @@ class TestHootel(object):
         options.add_experimental_option("detach", True)
         options.add_argument('--headless')
         self.browser = webdriver.Chrome(options=options)
-       # self.browser.maximize_window()
+        # self.browser.maximize_window()
         self.browser.set_window_size(1920, 1080)
         self.browser.get(URL)
 
