@@ -4,6 +4,8 @@ import allure
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 class TestHootel(object):
@@ -36,9 +38,10 @@ class TestHootel(object):
 
         submit_btn = self.browser.find_element(By.NAME, 'submit')
         submit_btn.click()
-        time.sleep(6)
+        #time.sleep(6)
 
-        logout_btn = self.browser.find_element(By.ID, 'logout-link')
+        #logout_btn = self.browser.find_element(By.ID, 'logout-link')
+        logout_btn = WebDriverWait(self.browser,5).until(EC.presence_of_element_located((By.ID, 'logout-link')))
 
         assert logout_btn.text == "Kilépés"
 
